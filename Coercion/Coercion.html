@@ -1547,8 +1547,8 @@ print(v)</code></pre>
 m &lt;- matrix(sample(10, size = 4,replace = TRUE), nrow = 2)
 print(m)</code></pre>
 <pre><code>##      [,1] [,2]
-## [1,]    5    1
-## [2,]    7    5</code></pre>
+## [1,]    4    8
+## [2,]    3    1</code></pre>
 <pre class="r"><code># Definimos una data frame:
 df &lt;- data.frame(&quot;dato&quot;= c(&quot;Expectativa&quot; , &quot;Realidad&quot;),
                  &quot;Huevos&quot; = c(1800, 9000),
@@ -1567,8 +1567,8 @@ print(l)</code></pre>
 ## 
 ## $Matriz
 ##      [,1] [,2]
-## [1,]    5    1
-## [2,]    7    5
+## [1,]    4    8
+## [2,]    3    1
 ## 
 ## $DataFrame
 ##          dato Huevos Azucar
@@ -1581,7 +1581,7 @@ print(l)</code></pre>
 &quot;Volvemos a la matriz m en un vector&quot;</code></pre>
 <pre><code>## [1] &quot;Volvemos a la matriz m en un vector&quot;</code></pre>
 <pre class="r"><code>as.vector(m) </code></pre>
-<pre><code>## [1] 5 7 1 5</code></pre>
+<pre><code>## [1] 4 3 8 1</code></pre>
 <pre class="r"><code>&quot;Volvemos al data frame en un vector&quot;</code></pre>
 <pre><code>## [1] &quot;Volvemos al data frame en un vector&quot;</code></pre>
 <pre class="r"><code>as.vector(df)</code></pre>
@@ -1598,8 +1598,8 @@ as.vector(l)</code></pre>
 ## 
 ## $Matriz
 ##      [,1] [,2]
-## [1,]    5    1
-## [2,]    7    5
+## [1,]    4    8
+## [2,]    3    1
 ## 
 ## $DataFrame
 ##          dato Huevos Azucar
@@ -1645,8 +1645,8 @@ as.data.frame(v)</code></pre>
 <pre class="r"><code># Coercionar una matriz a data frame:
 as.data.frame(m)</code></pre>
 <pre><code>##   V1 V2
-## 1  5  1
-## 2  7  5</code></pre>
+## 1  4  8
+## 2  3  1</code></pre>
 <p>Tuvimos éxito al coercionar vectores y matrices.</p>
 <p>El vector, al igual que cuando fue coercionado a matriz, devolvió como resultado un objeto con una sola columna, mientras que la matriz conservó sus renglones y columnas.</p>
 <div id="que-pasa-de-coercionar-listas-a-data-frames" class="section level2">
@@ -1677,16 +1677,16 @@ as.list(v)</code></pre>
 <pre class="r"><code># De matriz a lista:
 as.list(m)</code></pre>
 <pre><code>## [[1]]
-## [1] 5
+## [1] 4
 ## 
 ## [[2]]
-## [1] 7
+## [1] 3
 ## 
 ## [[3]]
-## [1] 1
+## [1] 8
 ## 
 ## [[4]]
-## [1] 5</code></pre>
+## [1] 1</code></pre>
 <pre class="r"><code># De data frame a lista:
 as.list(df)</code></pre>
 <pre><code>## $dato
