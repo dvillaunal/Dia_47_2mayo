@@ -1538,7 +1538,7 @@ message(&quot;\n# Crear un vector pseudo-aletorio y probar su tipo:&quot;)</code
 ## # Crear un vector pseudo-aletorio y probar su tipo:</code></pre>
 <pre class="r"><code>v &lt;- runif(5, min = 0, max = 10)
 print(v)</code></pre>
-<pre><code>## [1] 4.3448069 1.7649089 2.5970592 8.3224036 0.4148492</code></pre>
+<pre><code>## [1] 9.533395 5.041862 6.307025 6.978378 5.523269</code></pre>
 <pre class="r"><code># Recordemos que double, se refiere a decimal:
 message(&quot;\nRecordemos que double, se refiere a decimal:&quot;)</code></pre>
 <pre><code>## 
@@ -1619,16 +1619,9 @@ cat(&quot;seq (1, 10, length.out = 4)&quot;)</code></pre>
 <div id="cómo-acceder-a-los-elementos-de-un-vector" class="section level1">
 <h1><span class="header-section-number">3</span> ¿Cómo acceder a los elementos de un vector?</h1>
 <p>Se puede acceder a los elementos de un vector mediante la indexación vectorial. El vector utilizado para la indexación puede ser lógico, entero o de caracteres.</p>
-<table>
-<tbody>
-<tr class="odd">
-<td align="left">## NOTA R empieza en <strong>1</strong>:</td>
-</tr>
-<tr class="even">
-<td align="left"><strong>El índice de los vectores en R empieza en 1, a diferencia de la mayoría de los lenguajes de programación donde el índice empieza en 0.</strong></td>
-</tr>
-</tbody>
-</table>
+<blockquote>
+<p><strong>NOTA: R empieza en 1</strong>: <em>El índice de los vectores en R empieza en 1, a diferencia de la mayoría de los lenguajes de programación donde el índice empieza en 0.</em></p>
+</blockquote>
 <div id="usando-un-vector-entero-como-índice" class="section level2">
 <h2><span class="header-section-number">3.1</span> Usando un vector entero como índice:</h2>
 <ul>
@@ -1645,7 +1638,7 @@ message(&quot;\n# Usando un vector entero como índice:&quot;)</code></pre>
 <pre class="r"><code>Vint &lt;- sample(-20:20, size = 9, replace = TRUE)
 cat(&quot;\nVint = &quot;, Vint)</code></pre>
 <pre><code>## 
-## Vint =  -14 7 -18 8 16 1 -9 11 20</code></pre>
+## Vint =  14 2 -13 11 -7 -6 -3 3 -5</code></pre>
 <pre class="r"><code># Acedeamos a los elemntos:
 message(&quot;\n# Acedeamos a los elemntos:&quot;)</code></pre>
 <pre><code>## 
@@ -1654,17 +1647,17 @@ message(&quot;\n# Acedeamos a los elemntos:&quot;)</code></pre>
 print(&quot;#  Accedientdo al 2 elemento&quot;)</code></pre>
 <pre><code>## [1] &quot;#  Accedientdo al 2 elemento&quot;</code></pre>
 <pre class="r"><code>Vint[2]</code></pre>
-<pre><code>## [1] 7</code></pre>
+<pre><code>## [1] 2</code></pre>
 <pre class="r"><code># Accediendo al 1er y 4to elemento
 print(&quot;# Accediendo al 1er y 4to elemento&quot;)</code></pre>
 <pre><code>## [1] &quot;# Accediendo al 1er y 4to elemento&quot;</code></pre>
 <pre class="r"><code>Vint[1:4]</code></pre>
-<pre><code>## [1] -14   7 -18   8</code></pre>
+<pre><code>## [1]  14   2 -13  11</code></pre>
 <pre class="r"><code># Acceder a todos los elementos menos el 1er elemento:
 print(&quot;# Acceder a todos los elementos menos el 1er elemento:&quot;)</code></pre>
 <pre><code>## [1] &quot;# Acceder a todos los elementos menos el 1er elemento:&quot;</code></pre>
 <pre class="r"><code>Vint[-1]</code></pre>
-<pre><code>## [1]   7 -18   8  16   1  -9  11  20</code></pre>
+<pre><code>## [1]   2 -13  11  -7  -6  -3   3  -5</code></pre>
 <pre class="r"><code># no puede mezclar enteros positivos y negativos:
 message(&quot;\n# no puede mezclar enteros positivos y negativos:&quot;)</code></pre>
 <pre><code>## 
@@ -1679,7 +1672,7 @@ message(&quot;\n# los números reales se truncan en enteros:&quot;)</code></pre>
 <pre><code>## 
 ## # los números reales se truncan en enteros:</code></pre>
 <pre class="r"><code>cat(&quot;Vint[c(1.4, 5.13)] = &quot;, Vint[c(1.4, 5.13)])</code></pre>
-<pre><code>## Vint[c(1.4, 5.13)] =  -14 16</code></pre>
+<pre><code>## Vint[c(1.4, 5.13)] =  14 -7</code></pre>
 <pre class="r"><code>cat(&quot;\nEs decir, por cada double or float del vector dentro de los [] saldra un valor truncado del vector utilizado, en este caso Vint&quot;)</code></pre>
 <pre><code>## 
 ## Es decir, por cada double or float del vector dentro de los [] saldra un valor truncado del vector utilizado, en este caso Vint</code></pre>
@@ -1697,7 +1690,7 @@ message(&quot;\nRetomando el vector anterior, pero lo renombraremos como Vlog.&q
 ## Retomando el vector anterior, pero lo renombraremos como Vlog.</code></pre>
 <pre class="r"><code>Vlog = Vint
 print(Vlog)</code></pre>
-<pre><code>## [1] -14   7 -18   8  16   1  -9  11  20</code></pre>
+<pre><code>## [1]  14   2 -13  11  -7  -6  -3   3  -5</code></pre>
 <pre class="r"><code>cat(&quot;\nSize de Vlog = &quot;, length(Vlog))</code></pre>
 <pre><code>## 
 ## Size de Vlog =  9</code></pre>
@@ -1706,14 +1699,14 @@ message(&quot;\n## Probemos con un vecto logico:&quot;)</code></pre>
 <pre><code>## 
 ## ## Probemos con un vecto logico:</code></pre>
 <pre class="r"><code>cat(&quot;Vlog[c(TRUE, TRUE, FALSE, TRUE, FALSE)] = &quot;, Vlog[c(TRUE, TRUE, FALSE, TRUE, FALSE)])</code></pre>
-<pre><code>## Vlog[c(TRUE, TRUE, FALSE, TRUE, FALSE)] =  -14 7 8 1 -9 20</code></pre>
+<pre><code>## Vlog[c(TRUE, TRUE, FALSE, TRUE, FALSE)] =  14 2 11 -6 -3 -5</code></pre>
 <pre class="r"><code>## filtrar vectores basados en condiciones:
 message(&quot;\n## filtrar vectores basados en condiciones:&quot;)</code></pre>
 <pre><code>## 
 ## ## filtrar vectores basados en condiciones:</code></pre>
 <pre class="r"><code>cat(&quot;\nVlog[Vlog &gt; -10] &lt;=&gt;&quot;, Vlog[Vlog &gt; -10])</code></pre>
 <pre><code>## 
-## Vlog[Vlog &gt; -10] &lt;=&gt; 7 8 16 1 -9 11 20</code></pre>
+## Vlog[Vlog &gt; -10] &lt;=&gt; 14 2 11 -7 -6 -3 3 -5</code></pre>
 <pre class="r"><code>if(Vlog[Vlog &lt; 0] == c(0)){
   cat(&quot;\nVlog[Vlog &lt; 0] &lt;=&gt;&quot;,&quot;NO contengo datos menores a 0&quot;)
 
@@ -1721,7 +1714,7 @@ message(&quot;\n## filtrar vectores basados en condiciones:&quot;)</code></pre>
   cat(&quot;\nVlog[Vlog &lt; 0] &lt;=&gt;&quot;,Vlog[Vlog &lt; 0])
 }</code></pre>
 <pre><code>## 
-## Vlog[Vlog &lt; 0] &lt;=&gt; -14 -18 -9</code></pre>
+## Vlog[Vlog &lt; 0] &lt;=&gt; -13 -7 -6 -3 -5</code></pre>
 <p>En el ejemplo anterior, la expresión <code>x&gt;0</code> producirá un vector lógico <code>(FALSE, FALSE, FALSE, TRUE)</code> que luego se usa para indexar y dar el valor del vector que cumple la condición.</p>
 </div>
 </div>
@@ -1789,13 +1782,13 @@ b = sample(1:26, size = 1, replace = TRUE)
 vx[a] &lt;- b
 
 cat(paste0(&quot;vx[&quot;,a,&quot;]&quot;), paste0(&quot;&lt;- &quot;, b))</code></pre>
-<pre><code>## vx[2] &lt;- 17</code></pre>
+<pre><code>## vx[22] &lt;- 21</code></pre>
 <pre class="r"><code>## Veamos como modifico nuestro vector:
 message(&quot;\n## Veamos como modifico nuestro vector:&quot;)</code></pre>
 <pre><code>## 
 ## ## Veamos como modifico nuestro vector:</code></pre>
 <pre class="r"><code>cat(&quot;vx &lt;- &quot;, vx, sep = &quot;  &quot;)</code></pre>
-<pre><code>## vx &lt;-   -10  17  -8  -7  -6  -5  -4  -3  -2  -1  0  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15</code></pre>
+<pre><code>## vx &lt;-   -10  -9  -8  -7  -6  -5  -4  -3  -2  -1  0  1  2  3  4  5  6  7  8  9  10  21  12  13  14  15</code></pre>
 <pre class="r"><code>## Modificando elementos menores o mayores que:
 message(&quot;\n## Modificando elementos menores o mayores que:&quot;)</code></pre>
 <pre><code>## 
@@ -1809,7 +1802,7 @@ message(&quot;\n## Veamos como modifico nuestro vector:&quot;)</code></pre>
 <pre><code>## 
 ## ## Veamos como modifico nuestro vector:</code></pre>
 <pre class="r"><code>cat(&quot;vx &lt;- &quot;, vx, sep = &quot;  &quot;)</code></pre>
-<pre><code>## vx &lt;-   5  17  5  5  5  5  5  5  5  5  0  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15</code></pre>
+<pre><code>## vx &lt;-   5  5  5  5  5  5  5  5  5  5  0  1  2  3  4  5  6  7  8  9  10  21  12  13  14  15</code></pre>
 <pre class="r"><code>## truncar x a los 4 primeros elementos:
 message(&quot;\n## truncar x a los 4 primeros elementos:&quot;)</code></pre>
 <pre><code>## 
@@ -1820,7 +1813,7 @@ message(&quot;\n## Veamos como modifico nuestro vector:&quot;)</code></pre>
 <pre><code>## 
 ## ## Veamos como modifico nuestro vector:</code></pre>
 <pre class="r"><code>cat(&quot;vx &lt;- &quot;, vx, sep = &quot;  &quot;)</code></pre>
-<pre><code>## vx &lt;-   5  17  5  5</code></pre>
+<pre><code>## vx &lt;-   5  5  5  5</code></pre>
 </div>
 <div id="cómo-eliminar-un-vector" class="section level1">
 <h1><span class="header-section-number">5</span> ¿Cómo eliminar un vector?:</h1>
@@ -1831,7 +1824,7 @@ print(&quot;# Definimos un vector:&quot;)</code></pre>
 <pre class="r"><code>print(&quot;vx &lt;- -10:15&quot;)</code></pre>
 <pre><code>## [1] &quot;vx &lt;- -10:15&quot;</code></pre>
 <pre class="r"><code>cat(&quot;vx &lt;- &quot;, vx, sep = &quot;  &quot;)</code></pre>
-<pre><code>## vx &lt;-   5  17  5  5</code></pre>
+<pre><code>## vx &lt;-   5  5  5  5</code></pre>
 <pre class="r"><code>## Creamos una copia:
 message(&quot;\n## Creamos una copia:&quot;)</code></pre>
 <pre><code>## 

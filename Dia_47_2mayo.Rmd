@@ -121,10 +121,10 @@ cat("\nUn vector sl, especificando la longitud deseada del vector:\n", "sl = ", 
 
 Se puede acceder a los elementos de un vector mediante la indexación vectorial. El vector utilizado para la indexación puede ser lógico, entero o de caracteres.
 
---------------------------------------------------------------------------------
-## NOTA R empieza en __1__:
-__El índice de los vectores en R empieza en 1, a diferencia de la mayoría de los lenguajes de programación donde el índice empieza en 0.__
---------------------------------------------------------------------------------
+
+> __NOTA: R empieza en 1__:
+>_El índice de los vectores en R empieza en 1, a diferencia de la mayoría de los lenguajes de programación donde el índice empieza en 0._
+
 
 ## Usando un vector entero como índice:
 
